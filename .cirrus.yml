@@ -1,0 +1,12 @@
+windows_task:
+  env:
+    matrix:
+      - RUBY_VERSION: 2.5.3.101
+      - RUBY_VERSION: 2.6.3.1
+  windows_container:
+    os_version: 2019
+    image: cirrusci/windowsservercore:cmake
+  install_script:
+    - choco install -y ruby --version %RUBY_VERSION%
+    - refreshenv
+    - gem install fastlane
