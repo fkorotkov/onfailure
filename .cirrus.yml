@@ -5,6 +5,6 @@ task:
   test_cache:
     folder: cache
     populate_script:
-      for i in {1..500}; do
+      for i in {1..550}; do
         dd if=/dev/urandom of=cache/$RANDOM bs=1024 count=1024;
       done
