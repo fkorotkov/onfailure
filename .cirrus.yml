@@ -4,10 +4,7 @@ task:
     image: mojave-xcode-10.2
   test_cache:
     folder: cache
-  update_cache_script:
-  - rm -rf cache
-  - mkdir cache
-  - >
-    for i in {1..500}; do
-      dd if=/dev/urandom of=cache/$RANDOM bs=1024 count=1024
-    done
+    populate_script:
+      for i in {1..500}; do
+        dd if=/dev/urandom of=cache/$RANDOM bs=1024 count=1024;
+      done
