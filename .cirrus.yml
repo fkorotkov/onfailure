@@ -1,8 +1,8 @@
 task:
-  name: Linux cache
-  container:
-    image: ubuntu:latest
-  test_cache:
+  name: macOS cache
+   osx_instance:
+    image: mojave-xcode-10.2
+  foo_cache:
     folder: cache
     populate_script:
       - mkdir cache
