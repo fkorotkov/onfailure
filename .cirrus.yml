@@ -1,6 +1,6 @@
 task:
   name: macOS cache
-   osx_instance:
+  osx_instance:
     image: mojave-xcode-10.2
   foo_cache:
     folder: cache
